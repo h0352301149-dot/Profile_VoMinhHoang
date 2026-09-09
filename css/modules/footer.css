@@ -1,0 +1,46 @@
+/* =========================================================
+   PAGE FOOTER COMPONENT
+========================================================= */
+
+.page-footer {
+    position: relative;
+    z-index: 2;
+    width: 100vw;
+    margin-top: 4.5rem;
+    margin-bottom: -3.5rem;
+    padding: 24px 1rem 30px;
+    background: var(--footer-bg);
+    border-top: 2px solid var(--footer-border);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.4s var(--transition-smooth), border-color 0.4s var(--transition-smooth);
+}
+
+.footer-dashed-line {
+    width: 100%;
+    max-width: 1200px;
+    height: 2px;
+    margin-bottom: 16px;
+    background: repeating-linear-gradient(90deg, var(--footer-line) 0 24px, transparent 24px 42px);
+    opacity: 0.6;
+}
+
+.footer-copy {
+    color: var(--footer-text);
+    font-size: 0.82rem;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+    text-align: center;
+}
+
+@media (max-width: 640px) {
+    .page-footer {
+        margin-bottom: -3rem;
+        padding: 20px 0.8rem 26px;
+    }
+    .footer-copy {
+        font-size: 0.76rem;
+    }
+}

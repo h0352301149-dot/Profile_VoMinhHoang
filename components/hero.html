@@ -1,0 +1,71 @@
+<!-- =========================================================
+   HERO PROFILE & CONTACT RIBBON COMPONENT (PURE UI SHELL)
+   - Hoàn toàn không chứa dữ liệu text cứng
+   - Dữ liệu được kéo tự động từ Firestore qua js/data-service.js
+========================================================= -->
+<header class="glass-card hero-center-card scroll-reveal">
+    <div class="hero-avatar-area">
+        <div class="avatar-orbit">
+            <img src="assets/images/avatar.jpg" alt="Avatar" id="hero-avatar" class="avatar-img" width="120" height="120">
+        </div>
+        <h1 class="hero-name" id="hero-name"></h1>
+        <p class="hero-role" id="hero-title"></p>
+        <div class="status-badge">
+            <span class="beacon-dot" aria-hidden="true"></span>
+            <span id="hero-status" data-i18n="status">Sẵn sàng nhận việc</span>
+        </div>
+
+        <!-- NÚT TẢI CV & LIÊN KẾT NHANH -->
+        <div class="hero-actions" style="display: flex; gap: 10px; justify-content: center; align-items: center; margin-top: 14px; flex-wrap: wrap;">
+            <a href="#" id="hero-cv-btn" class="hero-action-btn" style="display: inline-flex; align-items: center; gap: 7px; padding: 7px 18px; border-radius: 20px; font-size: 0.85rem; font-weight: 700; background: linear-gradient(135deg, #0284c7, #7c3aed); color: #fff; box-shadow: 0 4px 14px rgba(2, 132, 199, 0.3); transition: var(--transition-smooth); cursor: pointer;" title="Tải xuống hoặc xem CV bản PDF">
+                <i class="fa-solid fa-file-arrow-down"></i>
+                <span data-i18n="btn-download-cv">Tải CV (PDF)</span>
+            </a>
+            <a href="https://github.com/" target="_blank" rel="noopener noreferrer" id="hero-github-link" class="hero-action-btn" style="display: inline-flex; align-items: center; gap: 6px; padding: 7px 16px; border-radius: 20px; font-size: 0.85rem; font-weight: 700; background: rgba(0,0,0,0.06); border: 1px solid rgba(0,0,0,0.1); color: var(--card-text); transition: var(--transition-smooth);" title="Xem GitHub">
+                <i class="fa-brands fa-github"></i>
+                <span>GitHub</span>
+            </a>
+            <a href="https://linkedin.com/" target="_blank" rel="noopener noreferrer" id="hero-linkedin-link" class="hero-action-btn" style="display: inline-flex; align-items: center; gap: 6px; padding: 7px 16px; border-radius: 20px; font-size: 0.85rem; font-weight: 700; background: rgba(2,132,199,0.1); border: 1px solid rgba(2,132,199,0.25); color: var(--primary-blue); transition: var(--transition-smooth);" title="Xem LinkedIn">
+                <i class="fa-brands fa-linkedin"></i>
+                <span>LinkedIn</span>
+            </a>
+        </div>
+    </div>
+
+    <!-- THANH LIÊN HỆ & SAO CHÉP -->
+    <div class="contact-ribbon" role="region" aria-label="Thông tin liên hệ">
+        <div class="contact-chip chip-zalo copy-trigger" id="hero-phone-chip" data-copy="" role="button" tabindex="0" title="Bấm để sao chép số Zalo">
+            <div class="chip-icon" aria-hidden="true"><i class="fa-solid fa-comment-dots"></i></div>
+            <div class="chip-text">
+                <small data-i18n="lbl-zalo">ZALO</small>
+                <strong id="hero-phone"></strong>
+            </div>
+            <span class="copy-hint-icon" aria-hidden="true"><i class="fa-regular fa-copy"></i></span>
+        </div>
+
+        <div class="contact-chip copy-trigger" id="hero-email-chip" data-copy="" role="button" tabindex="0" title="Bấm để sao chép Email">
+            <div class="chip-icon" aria-hidden="true"><i class="fa-solid fa-envelope"></i></div>
+            <div class="chip-text">
+                <small data-i18n="lbl-email">EMAIL</small>
+                <strong id="hero-email"></strong>
+            </div>
+            <span class="copy-hint-icon" aria-hidden="true"><i class="fa-regular fa-copy"></i></span>
+        </div>
+
+        <div class="contact-chip">
+            <div class="chip-icon" aria-hidden="true"><i class="fa-solid fa-cake-candles"></i></div>
+            <div class="chip-text">
+                <small data-i18n="lbl-dob">NGÀY SINH</small>
+                <strong id="hero-dob"></strong>
+            </div>
+        </div>
+
+        <div class="contact-chip">
+            <div class="chip-icon" aria-hidden="true"><i class="fa-solid fa-location-dot"></i></div>
+            <div class="chip-text">
+                <small data-i18n="lbl-loc">ĐỊA CHỈ</small>
+                <strong id="hero-loc"></strong>
+            </div>
+        </div>
+    </div>
+</header>

@@ -1,0 +1,62 @@
+/* =========================================================
+   NAVBAR COMPONENT: THEME & LANGUAGE SWITCHES
+========================================================= */
+
+.top-nav-bar {
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 1rem;
+    position: relative;
+    z-index: 100;
+    animation: pageIntro 0.7s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.nav-switches {
+    display: flex;
+    gap: 10px;
+    background: var(--nav-bg);
+    padding: 6px 10px;
+    border-radius: 22px;
+    border: 1.5px solid var(--nav-border);
+    box-shadow: var(--shadow-main);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+    transition: var(--transition-smooth);
+}
+
+.nav-action-btn {
+    background: var(--nav-btn-bg);
+    color: var(--nav-btn-color);
+    border: none;
+    padding: 8px 16px;
+    min-height: 40px;
+    min-width: 44px;
+    border-radius: 14px;
+    font-weight: 700;
+    font-size: 0.9rem;
+    font-family: inherit;
+    cursor: pointer;
+    transition: var(--transition-smooth);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.nav-action-btn:hover {
+    background: linear-gradient(135deg, var(--primary-blue), var(--primary-purple));
+    color: #ffffff;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(124, 58, 237, 0.35);
+}
+
+.nav-action-btn:focus-visible {
+    outline: 2px solid var(--primary-blue);
+    outline-offset: 2px;
+}
+
+.btn-theme {
+    font-size: 1rem;
+}

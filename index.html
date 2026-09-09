@@ -1,15 +1,38 @@
 <!DOCTYPE html>
-<html lang="vi" data-theme="dark">
+<html lang="vi" data-theme="light">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Võ Minh Hoàng | Data Science Portfolio</title>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Portfolio của Võ Minh Hoàng - Sinh viên chuyên ngành Khoa học Dữ liệu (Data Science) tại ĐH Nguyễn Tất Thành. Định hướng Data Analyst / Data Scientist.">
+    <meta name="keywords" content="Võ Minh Hoàng, Khoa học Dữ liệu, Data Science, Data Analyst, Machine Learning, Power BI, Python, Portfolio">
+    <meta name="author" content="Võ Minh Hoàng">
+
+    <!-- Open Graph / Social Sharing -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Võ Minh Hoàng | Data Science Portfolio">
+    <meta property="og:description" content="Portfolio chuyên ngành Khoa học Dữ liệu: Machine Learning, BI Dashboard, Mobile & Web Engineering.">
+    <meta property="og:image" content="assets/images/avatar.jpg">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700;800&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="css/style.css?v=20260910_07">
 </head>
 <body>
 
+    <!-- HIỆU ỨNG KHINH KHÍ CẦU (LIGHT THEME) -->
     <div class="balloon-scene" aria-hidden="true">
         <span class="balloon balloon-blue balloon-left-1"></span>
         <span class="balloon balloon-pink balloon-left-2"></span>
@@ -25,263 +48,205 @@
         <span class="balloon balloon-pink balloon-right-6"></span>
     </div>
 
-        <div class="star-scene" aria-hidden="true">
-            <span class="star"></span><span class="star"></span><span class="star"></span><span class="star"></span><span class="star"></span>
-            <span class="star"></span><span class="star"></span><span class="star"></span><span class="star"></span><span class="star"></span>
-            <span class="star"></span><span class="star"></span><span class="star"></span><span class="star"></span><span class="star"></span>
-            <span class="star"></span><span class="star"></span><span class="star"></span><span class="star"></span><span class="star"></span>
-        </div>
+    <!-- HIỆU ỨNG BẦU TRỜI SAO (DARK THEME) -->
+    <div class="star-scene" aria-hidden="true">
+        <span class="star"></span><span class="star"></span><span class="star"></span><span class="star"></span>
+        <span class="star"></span><span class="star"></span><span class="star"></span><span class="star"></span>
+        <span class="star"></span><span class="star"></span><span class="star"></span><span class="star"></span>
+        <span class="star"></span><span class="star"></span><span class="star"></span><span class="star"></span>
+        <span class="star"></span><span class="star"></span><span class="star"></span><span class="star"></span>
+    </div>
 
-    <!-- CỤM NÚT ĐỔI NGÔN NGỮ & SÁNG/TỐI Ở GÓC TRÊN CÙNG -->
-    <nav class="top-nav-bar">
+    <!-- 1. CỤM NÚT ĐỔI NGÔN NGỮ & SÁNG/TỐI Ở GÓC TRÊN CÙNG -->
+    <nav class="top-nav-bar" aria-label="Thanh công cụ chuyển đổi">
         <div class="nav-switches">
-            <button class="nav-action-btn btn-lang" id="langToggle" type="button" aria-label="Toggle language">
-                <i class="fa-solid fa-globe"></i> <span id="langText">EN</span>
+            <button class="nav-action-btn btn-lang" id="langToggle" type="button" aria-label="Chuyển đổi ngôn ngữ Tiếng Việt / English">
+                <i class="fa-solid fa-globe" aria-hidden="true"></i> <span id="langText">EN</span>
             </button>
-            <button class="nav-action-btn btn-theme" id="themeToggle" type="button" aria-label="Toggle theme">
-                <i class="fa-solid fa-moon" id="themeIcon"></i>
+            <button class="nav-action-btn btn-theme" id="themeToggle" type="button" aria-label="Chuyển đổi giao diện Sáng / Tối">
+                <i class="fa-solid fa-moon" id="themeIcon" aria-hidden="true"></i>
             </button>
         </div>
     </nav>
 
     <!-- THÔNG BÁO POPUP SAO CHÉP -->
-    <div id="copyToast" class="toast-popup">
-        <i class="fa-solid fa-circle-check"></i> <span id="toastMsg" data-i18n="toast-copied">Đã sao chép vào bộ nhớ tạm!</span>
+    <div id="copyToast" class="toast-popup" role="status" aria-live="polite">
+        <i class="fa-solid fa-circle-check" aria-hidden="true"></i> <span id="toastMsg" data-i18n="toast-copied">Đã sao chép vào bộ nhớ tạm!</span>
     </div>
 
+    <!-- NỘI DUNG CHÍNH PORTFOLIO -->
     <div class="portfolio-container">
 
-        <!-- ======================= 1. HERO PROFILE CĂN GIỮA ======================= -->
+        <!-- ======================= 2. HERO PROFILE CĂN GIỮA (PURE UI SHELL) ======================= -->
         <header class="glass-card hero-center-card scroll-reveal">
-            <div class="card-sheen"></div>
-            <div class="card-spotlight"></div>
-
             <div class="hero-avatar-area">
-                <div class="avatar-orbit" style="width: 120px; height: 120px; min-width: 120px; max-width: 120px; min-height: 120px; max-height: 120px; border-radius: 50%; overflow: hidden; margin: 0 auto 1.1rem; padding: 3px; display: block;">
-                    <img src="hinh/5a9eb1c2-9844-4c57-aa9a-2203aa04707f.jpg" alt="Võ Minh Hoàng" class="avatar-img" style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%; display: block;">
+                <div class="avatar-orbit">
+                    <img src="assets/images/avatar.jpg" alt="Chân dung Võ Minh Hoàng" id="hero-avatar" class="avatar-img" width="120" height="120">
                 </div>
-                <h1 class="hero-name" data-i18n="name">VÕ MINH HOÀNG</h1>
-                <p class="hero-role" data-i18n="role">Chuyên ngành Khoa học Dữ liệu</p>
+                <h1 class="hero-name" id="hero-name" data-i18n="name"></h1>
+                <p class="hero-role" id="hero-title" data-i18n="role"></p>
                 <div class="status-badge">
-                    <span class="beacon-dot"></span>
-                    <span data-i18n="status">Sẵn sàng nhận việc</span>
+                    <span class="beacon-dot" aria-hidden="true"></span>
+                    <span id="hero-status" data-i18n="status"></span>
+                </div>
+
+                <!-- NÚT TẢI CV & LIÊN KẾT NHANH -->
+                <div class="hero-actions" style="display: flex; gap: 10px; justify-content: center; align-items: center; margin-top: 14px; flex-wrap: wrap;">
+                    <a href="#" id="hero-cv-btn" class="hero-action-btn" style="display: inline-flex; align-items: center; gap: 7px; padding: 7px 18px; border-radius: 20px; font-size: 0.85rem; font-weight: 700; background: linear-gradient(135deg, #0284c7, #7c3aed); color: #fff; box-shadow: 0 4px 14px rgba(2, 132, 199, 0.3); transition: var(--transition-smooth); cursor: pointer;" title="Tải xuống hoặc xem CV bản PDF">
+                        <i class="fa-solid fa-file-arrow-down"></i>
+                        <span data-i18n="btn-download-cv">Tải CV (PDF)</span>
+                    </a>
+                    <a href="https://github.com/" target="_blank" rel="noopener noreferrer" id="hero-github-link" class="hero-action-btn" style="display: inline-flex; align-items: center; gap: 6px; padding: 7px 16px; border-radius: 20px; font-size: 0.85rem; font-weight: 700; background: rgba(0,0,0,0.06); border: 1px solid rgba(0,0,0,0.1); color: var(--card-text); transition: var(--transition-smooth);" title="Xem GitHub">
+                        <i class="fa-brands fa-github"></i>
+                        <span>GitHub</span>
+                    </a>
+                    <a href="https://linkedin.com/" target="_blank" rel="noopener noreferrer" id="hero-linkedin-link" class="hero-action-btn" style="display: inline-flex; align-items: center; gap: 6px; padding: 7px 16px; border-radius: 20px; font-size: 0.85rem; font-weight: 700; background: rgba(2,132,199,0.1); border: 1px solid rgba(2,132,199,0.25); color: var(--primary-blue); transition: var(--transition-smooth);" title="Xem LinkedIn">
+                        <i class="fa-brands fa-linkedin"></i>
+                        <span>LinkedIn</span>
+                    </a>
                 </div>
             </div>
 
-            <!-- THANH LIÊN HỆ -->
-            <div class="contact-ribbon">
-                <div class="contact-chip chip-zalo copy-trigger" data-copy="0352301149" title="Bấm để sao chép số điện thoại">
-                    <div class="chip-icon"><i class="fa-solid fa-comment-dots"></i></div>
+            <!-- THANH LIÊN HỆ & SAO CHÉP -->
+            <div class="contact-ribbon" role="region" aria-label="Thông tin liên hệ">
+                <div class="contact-chip chip-zalo copy-trigger" id="hero-phone-chip" data-copy="" role="button" tabindex="0" title="Bấm để sao chép số Zalo">
+                    <div class="chip-icon" aria-hidden="true"><i class="fa-solid fa-comment-dots"></i></div>
                     <div class="chip-text">
                         <small data-i18n="lbl-zalo">ZALO</small>
-                        <strong>0352301149</strong>
+                        <strong id="hero-phone"></strong>
                     </div>
-                    <span class="copy-hint-icon"><i class="fa-regular fa-copy"></i></span>
+                    <span class="copy-hint-icon" aria-hidden="true"><i class="fa-regular fa-copy"></i></span>
                 </div>
 
-                <div class="contact-chip copy-trigger" data-copy="h0352301149@gmail.com" title="Bấm để sao chép email">
-                    <div class="chip-icon"><i class="fa-solid fa-envelope"></i></div>
+                <div class="contact-chip copy-trigger" id="hero-email-chip" data-copy="" role="button" tabindex="0" title="Bấm để sao chép Email">
+                    <div class="chip-icon" aria-hidden="true"><i class="fa-solid fa-envelope"></i></div>
                     <div class="chip-text">
                         <small data-i18n="lbl-email">EMAIL</small>
-                        <strong>h0352301149@gmail.com</strong>
+                        <strong id="hero-email"></strong>
                     </div>
-                    <span class="copy-hint-icon"><i class="fa-regular fa-copy"></i></span>
+                    <span class="copy-hint-icon" aria-hidden="true"><i class="fa-regular fa-copy"></i></span>
                 </div>
 
                 <div class="contact-chip">
-                    <div class="chip-icon"><i class="fa-solid fa-cake-candles"></i></div>
+                    <div class="chip-icon" aria-hidden="true"><i class="fa-solid fa-cake-candles"></i></div>
                     <div class="chip-text">
                         <small data-i18n="lbl-dob">NGÀY SINH</small>
-                        <strong data-i18n="val-dob">22 tháng 02 năm 2005</strong>
+                        <strong id="hero-dob" data-i18n="val-dob"></strong>
                     </div>
                 </div>
 
                 <div class="contact-chip">
-                    <div class="chip-icon"><i class="fa-solid fa-location-dot"></i></div>
+                    <div class="chip-icon" aria-hidden="true"><i class="fa-solid fa-location-dot"></i></div>
                     <div class="chip-text">
                         <small data-i18n="lbl-loc">ĐỊA CHỈ</small>
-                        <strong data-i18n="val-loc">TP. Hồ Chí Minh</strong>
+                        <strong id="hero-loc" data-i18n="val-loc"></strong>
                     </div>
                 </div>
             </div>
         </header>
 
+        <!-- ĐƯỜNG BAY MÁY BAY GIẤY -->
         <div class="paper-plane-divider" aria-hidden="true">
             <i class="fa-regular fa-paper-plane"></i>
             <span class="flight-path"></span>
         </div>
 
-        <!-- ======================= 2. BỐ CỤC BENTO MATRIX ======================= -->
+        <!-- ======================= 3. BỐ CỤC BENTO MATRIX (PURE UI SHELL) ======================= -->
         <main class="bento-matrix">
 
             <!-- MỤC TIÊU NGHỀ NGHIỆP -->
-            <section class="glass-card about-section bento-col-8 scroll-reveal">
-                <div class="card-sheen"></div>
-                <div class="card-spotlight"></div>
+            <section class="glass-card about-section bento-col-8 scroll-reveal" aria-labelledby="about-heading">
                 <div class="card-title-row">
-                    <span class="badge-flare flare-pastel-blue"><i class="fa-solid fa-compass"></i></span>
-                    <h2 data-i18n="title-about">Mục tiêu nghề nghiệp</h2>
+                    <span class="badge-flare flare-pastel-blue" aria-hidden="true"><i class="fa-solid fa-compass"></i></span>
+                    <h2 id="about-heading" data-i18n="title-about">Mục tiêu nghề nghiệp</h2>
                 </div>
-                <p class="narrative-body" data-i18n="desc-about">
-                    Sinh viên năm 3 ngành Khoa học Dữ liệu tại ĐH Nguyễn Tất Thành (GPA 3.2/4.0), sở hữu nền tảng toán ứng dụng, lập trình Python/Dart và tư duy phân tích hệ thống. Nắm vững quy trình xử lý dữ liệu từ thô đến mô hình hóa (Data Cleaning, Feature Engineering, Modeling) cùng khả năng phát triển ứng dụng cơ bản. Mong muốn tìm kiếm cơ hội thực tập vị trí <strong>Data Analyst / Data Scientist</strong> để áp dụng năng lực phân tích, tối ưu hóa quy trình và đóng góp giá trị thực tế cho doanh nghiệp.
+                <p class="narrative-body" id="hero-bio" data-i18n="desc-about">
+                    <span class="skeleton-line" style="display: block; width: 100%;"></span>
+                    <span class="skeleton-line" style="display: block; width: 92%;"></span>
+                    <span class="skeleton-line" style="display: block; width: 78%;"></span>
                 </p>
             </section>
 
             <!-- HỌC VẤN -->
-            <section class="glass-card education-section bento-col-4 scroll-reveal">
-                <div class="card-sheen"></div>
-                <div class="card-spotlight"></div>
+            <section class="glass-card education-section bento-col-4 scroll-reveal" aria-labelledby="edu-heading">
                 <div class="card-title-row">
-                    <span class="badge-flare flare-pastel-purple"><i class="fa-solid fa-graduation-cap"></i></span>
-                    <h2 data-i18n="title-edu">Học vấn và Bằng cấp</h2>
+                    <span class="badge-flare flare-pastel-purple" aria-hidden="true"><i class="fa-solid fa-graduation-cap"></i></span>
+                    <h2 id="edu-heading" data-i18n="title-edu">Học vấn và Bằng cấp</h2>
                 </div>
-                <div class="edu-card-content">
-                    <div class="edu-top-line">
-                        <h3 data-i18n="edu-school">Trường Đại học Nguyễn Tất Thành</h3>
-                        <span class="gpa-pill">GPA 3.2 / 4.0</span>
-                    </div>
-                    <p class="edu-period"><span data-i18n="edu-major">Chuyên ngành Khoa học Dữ liệu</span></p>
-                    <p class="edu-summary" data-i18n="edu-desc">Sở hữu nền tảng toán ứng dụng, lập trình Python/Dart và tư duy phân tích hệ thống. Nắm vững quy trình xử lý dữ liệu từ thô đến mô hình hóa.</p>
+                <div class="edu-card-content" id="education-container">
+                    <div class="skeleton-line" style="width: 75%; height: 18px;"></div>
+                    <div class="skeleton-line" style="width: 50%;"></div>
+                    <div class="skeleton-line" style="width: 90%;"></div>
                 </div>
             </section>
 
             <!-- DỰ ÁN NỔI BẬT -->
-            <section class="glass-card projects-section bento-col-12 scroll-reveal">
-                <div class="card-sheen"></div>
-                <div class="card-spotlight"></div>
+            <section class="glass-card projects-section bento-col-12 scroll-reveal" aria-labelledby="projects-heading">
                 <div class="card-title-row">
-                    <span class="badge-flare flare-pastel-mint"><i class="fa-solid fa-cubes-stacked"></i></span>
-                    <h2 data-i18n="title-projects">Dự án nổi bật và Kinh nghiệm thực hành</h2>
+                    <span class="badge-flare flare-pastel-mint" aria-hidden="true"><i class="fa-solid fa-cubes-stacked"></i></span>
+                    <h2 id="projects-heading" data-i18n="title-projects">Dự án nổi bật và Kinh nghiệm thực hành</h2>
                 </div>
 
-                <div class="project-matrix">
-                    <article class="project-pod pod-pastel-blue">
-                        <div class="project-header">
-                            <div>
-                                <h3 data-i18n="p1-title">Hệ thống Gợi ý Sản phẩm và Mô hình Dự báo</h3>
-                            </div>
-                            <div class="badge-tag-wrap">
-                                <span class="badge-tag tag-verified"><i class="fa-solid fa-check"></i> ML Pipeline</span>
-                                <span class="year-flag flag-pastel-blue">2026</span>
-                            </div>
-                        </div>
-                        <ul class="bullet-list">
-                            <li data-i18n="p1-b1"><strong>Quy trình dữ liệu:</strong> Khảo sát dữ liệu thô, xử lý giá trị thiếu (missing values), nhiễu (outliers) và chuẩn hóa thuộc tính (feature scaling) bằng Python (Pandas, NumPy).</li>
-                            <li data-i18n="p1-b2"><strong>Mô hình hóa:</strong> Triển khai thuật toán Collaborative Filtering (User-Based, Item-Based); thử nghiệm và so sánh hiệu năng giữa Machine Learning (Random Forest, XGBoost) và chuỗi thời gian (LSTM).</li>
-                            <li data-i18n="p1-b3"><strong>Đánh giá và Tối ưu:</strong> Tinh chỉnh siêu tham số (Hyperparameter Tuning), đánh giá mô hình qua chỉ số Precision, Recall, F1-Score và NDCG@K để đảm bảo độ chính xác.</li>
-                        </ul>
-                    </article>
-
-                    <article class="project-pod pod-pastel-peach">
-                        <div class="project-header">
-                            <div>
-                                <h3 data-i18n="p2-title">Dashboard Phân tích Tiêm chủng Toàn cầu</h3>
-                            </div>
-                            <div class="badge-tag-wrap">
-                                <span class="badge-tag tag-verified"><i class="fa-solid fa-chart-line"></i> BI Dashboard</span>
-                                <span class="year-flag flag-pastel-peach">2026</span>
-                            </div>
-                        </div>
-                        <ul class="bullet-list">
-                            <li data-i18n="p2-b1"><strong>Xử lý dữ liệu:</strong> Trích xuất và làm sạch bộ dữ liệu đa chiều từ UNICEF bằng Power Query.</li>
-                            <li data-i18n="p2-b2"><strong>Trực quan hóa:</strong> Thiết kế mô hình dữ liệu (Data Model), viết hàm DAX tính toán các chỉ số bao phủ vắc-xin (BCG, POL3, DTP3, HEPBB, MCV1) và chuyển hóa thành dashboard báo cáo tương tác trực quan.</li>
-                        </ul>
-                    </article>
-
-                    <article class="project-pod pod-pastel-mint">
-                        <div class="project-header">
-                            <div>
-                                <h3 data-i18n="p3-title">Phát triển Ứng dụng Di động và Website</h3>
-                            </div>
-                            <div class="badge-tag-wrap">
-                                <span class="badge-tag tag-verified"><i class="fa-solid fa-mobile-screen"></i> Cross-platform</span>
-                                <span class="year-flag flag-pastel-mint">2025</span>
-                            </div>
-                        </div>
-                        <ul class="bullet-list">
-                            <li data-i18n="p3-b1"><strong>Ứng dụng Mạng xã hội Lava (Flutter/Firebase):</strong> Thiết kế giao diện đa nền tảng (hỗ trợ Dark Mode), tích hợp Realtime Database và Authentication để xử lý luồng sự kiện thời gian thực (nhắn tin, đăng bài).</li>
-                            <li data-i18n="p3-b2"><strong>Website Bán Hàng (HTML/CSS/JS):</strong> Lập trình giao diện hiển thị danh sách sản phẩm chuẩn responsive, tối ưu trải nghiệm người dùng và kiểm thử độ tương thích trình duyệt.</li>
-                        </ul>
-                    </article>
+                <div class="project-matrix" id="projects-container">
+                    <div class="skeleton-line" style="height: 120px; border-radius: 16px;"></div>
+                    <div class="skeleton-line" style="height: 120px; border-radius: 16px;"></div>
                 </div>
             </section>
 
-            <!-- KỸ NĂNG -->
-            <section class="glass-card programming-section bento-col-6 scroll-reveal">
-                <div class="card-sheen"></div>
-                <div class="card-spotlight"></div>
+            <!-- KỸ NĂNG: LẬP TRÌNH VÀ CSDL -->
+            <section class="glass-card programming-section bento-col-6 scroll-reveal" aria-labelledby="code-heading">
                 <div class="card-title-row">
-                    <span class="badge-flare flare-pastel-blue"><i class="fa-solid fa-code"></i></span>
-                    <h2 data-i18n="sub-code">Lập trình và CSDL</h2>
+                    <span class="badge-flare flare-pastel-blue" aria-hidden="true"><i class="fa-solid fa-code"></i></span>
+                    <h2 id="code-heading" data-i18n="sub-code">Lập trình và CSDL</h2>
                 </div>
-                <div class="tile-chips">
-                    <span class="interactive-chip chip-pastel-blue">Python</span>
-                    <span class="interactive-chip chip-pastel-blue">SQL</span>
-                    <span class="interactive-chip chip-pastel-blue">Dart</span>
-                    <span class="interactive-chip chip-pastel-blue">HTML/CSS</span>
-                    <span class="interactive-chip chip-pastel-blue">JavaScript</span>
-                    <span class="interactive-chip chip-pastel-blue">Firebase</span>
+                <div class="tile-chips" id="skills-programming-chips">
+                    <span class="skeleton-line" style="width: 80px; height: 28px; display: inline-block; border-radius: 10px; margin: 4px;"></span>
+                    <span class="skeleton-line" style="width: 70px; height: 28px; display: inline-block; border-radius: 10px; margin: 4px;"></span>
+                    <span class="skeleton-line" style="width: 90px; height: 28px; display: inline-block; border-radius: 10px; margin: 4px;"></span>
                 </div>
             </section>
 
-            <section class="glass-card library-section bento-col-6 scroll-reveal">
-                <div class="card-sheen"></div>
-                <div class="card-spotlight"></div>
+            <!-- KỸ NĂNG: THƯ VIỆN VÀ CÔNG CỤ -->
+            <section class="glass-card library-section bento-col-6 scroll-reveal" aria-labelledby="tools-heading">
                 <div class="card-title-row">
-                    <span class="badge-flare flare-pastel-purple"><i class="fa-solid fa-chart-pie"></i></span>
-                    <h2 data-i18n="sub-tools">Thư viện và Công cụ Dữ liệu</h2>
+                    <span class="badge-flare flare-pastel-purple" aria-hidden="true"><i class="fa-solid fa-chart-pie"></i></span>
+                    <h2 id="tools-heading" data-i18n="sub-tools">Thư viện và Công cụ Dữ liệu</h2>
                 </div>
-                <div class="tile-chips">
-                    <span class="interactive-chip chip-pastel-purple">Pandas</span>
-                    <span class="interactive-chip chip-pastel-purple">NumPy</span>
-                    <span class="interactive-chip chip-pastel-purple">Scikit-learn</span>
-                    <span class="interactive-chip chip-pastel-peach">Power BI</span>
-                    <span class="interactive-chip chip-pastel-peach">Power Query</span>
-                    <span class="interactive-chip chip-pastel-mint">Flutter</span>
-                    <span class="interactive-chip chip-slate">Git/GitHub</span>
-                    <span class="interactive-chip chip-slate">Google Colab</span>
-                    <span class="interactive-chip chip-slate">VS Code</span>
+                <div class="tile-chips" id="skills-tools-chips">
+                    <span class="skeleton-line" style="width: 80px; height: 28px; display: inline-block; border-radius: 10px; margin: 4px;"></span>
+                    <span class="skeleton-line" style="width: 100px; height: 28px; display: inline-block; border-radius: 10px; margin: 4px;"></span>
+                    <span class="skeleton-line" style="width: 75px; height: 28px; display: inline-block; border-radius: 10px; margin: 4px;"></span>
                 </div>
             </section>
 
-            <!-- MINDSET -->
-            <section class="glass-card mindset-section bento-col-12 scroll-reveal">
-                <div class="card-sheen"></div>
-                <div class="card-spotlight"></div>
+            <!-- TƯ DUY NGHỀ NGHIỆP & KỸ NĂNG MỀM -->
+            <section class="glass-card mindset-section bento-col-12 scroll-reveal" aria-labelledby="mindset-heading">
                 <div class="card-title-row">
-                    <span class="badge-flare flare-pastel-mint"><i class="fa-solid fa-lightbulb"></i></span>
-                    <h2 data-i18n="tag-mindset">Kỹ năng tư duy và Năng lực bổ trợ</h2>
+                    <span class="badge-flare flare-pastel-mint" aria-hidden="true"><i class="fa-solid fa-lightbulb"></i></span>
+                    <h2 id="mindset-heading" data-i18n="tag-mindset">Kỹ năng tư duy và Năng lực bổ trợ</h2>
                 </div>
 
-                <div class="mindset-matrix">
-                    <div class="mindset-box">
-                        <strong><i class="fa-solid fa-shield-halved text-pastel-blue"></i> <span data-i18n="mindset-1-title">Tư duy Phản biện Dữ liệu:</span></strong>
-                        <span data-i18n="mindset-1-desc">Luôn hoài nghi và kiểm tra lại tính toàn vẹn, độ tin cậy cũng như độ lệch (bias) của dữ liệu trước khi đưa vào mô hình huấn luyện.</span>
-                    </div>
-                    <div class="mindset-box">
-                        <strong><i class="fa-solid fa-puzzle-piece text-pastel-purple"></i> <span data-i18n="mindset-2-title">Tư duy Giải quyết Vấn đề:</span></strong>
-                        <span data-i18n="mindset-2-desc">Khả năng bóc tách bài toán nghiệp vụ phức tạp thành các bước kỹ thuật nhỏ, ưu tiên chọn giải pháp tối ưu và đơn giản nhất.</span>
-                    </div>
-                    <div class="mindset-box">
-                        <strong><i class="fa-solid fa-book-open-reader text-pastel-mint"></i> <span data-i18n="mindset-3-title">Năng lực Tự học và Đọc Tài liệu:</span></strong>
-                        <span data-i18n="mindset-3-desc">Chủ động nghiên cứu tài liệu kỹ thuật tiếng Anh (Technical Documentation/API Specs), có khả năng tự tra cứu và sửa lỗi (debug) độc lập.</span>
-                    </div>
-                    <div class="mindset-box">
-                        <strong><i class="fa-solid fa-sliders text-pastel-peach"></i> <span data-i18n="mindset-4-title">Linh hoạt và Thích ứng:</span></strong>
-                        <span data-i18n="mindset-4-desc">Dễ dàng chuyển đổi linh hoạt giữa việc phân tích dữ liệu, viết code ứng dụng di động hoặc làm giao diện web tùy theo yêu cầu của dự án.</span>
-                    </div>
+                <div class="mindset-matrix" id="mindset-container">
+                    <div class="skeleton-line" style="height: 64px; border-radius: 14px;"></div>
+                    <div class="skeleton-line" style="height: 64px; border-radius: 14px;"></div>
                 </div>
             </section>
 
         </main>
     </div>
 
-    <footer class="page-footer">
-        <span class="footer-dashed-line"></span>
-        <p class="footer-copy">© 2026 Võ Minh Hoàng · Data Science Portfolio</p>
+    <!-- 4. CHÂN TRANG (FOOTER) -->
+    <footer class="page-footer" role="contentinfo">
+        <div class="footer-dashed-line" aria-hidden="true"></div>
+        <p class="footer-copy" data-i18n="footer-copy">© 2026 Võ Minh Hoàng · Data Science Portfolio</p>
     </footer>
 
-    <script src="js/translations.js"></script>
-    <script src="js/script.js"></script>
+    <!-- Scripts -->
+    <script src="js/translations.js?v=20260910_07"></script>
+    <script type="module" src="js/main.js?v=20260910_07"></script>
+    <!-- Nhúng Firebase Config Module -->
+    <script type="module" src="./js/modules/firebase-config.js?v=20260910_07"></script>
+    <!-- Module Dịch vụ Cào & Render Dữ liệu từ Firestore -->
+    <script type="module" src="./js/data-service.js?v=20260910_07"></script>
 </body>
 </html>

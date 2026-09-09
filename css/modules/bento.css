@@ -1,0 +1,171 @@
+/* =========================================================
+   BENTO GRID LAYOUT & BASE GLASS-CARD SYSTEM
+========================================================= */
+
+.bento-matrix {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 1.5rem;
+}
+
+.bento-col-12 { grid-column: span 12; }
+.bento-col-8  { grid-column: span 8; }
+.bento-col-6  { grid-column: span 6; }
+.bento-col-4  { grid-column: span 4; }
+
+/* Base Glass-Card */
+.glass-card {
+    background: var(--card-bg);
+    border: 2px solid var(--card-border);
+    border-radius: 22px;
+    padding: clamp(1.4rem, 2.4vw, 2.2rem);
+    box-shadow: var(--shadow-main);
+    position: relative;
+    overflow: hidden;
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    transition: var(--transition-smooth);
+}
+
+.glass-card:hover {
+    transform: translateY(-4px) scale(1.006);
+    box-shadow: var(--shadow-hover);
+    border-color: var(--card-hover-border);
+}
+
+/* Section Colors with Clean Variable Inheritances */
+.about-section {
+    background: var(--bg-about);
+    border-color: var(--border-about);
+}
+
+.education-section {
+    background: var(--bg-edu);
+    border-color: var(--border-edu);
+}
+
+.projects-section {
+    background: var(--bg-projects);
+    border-color: var(--border-projects);
+}
+
+.programming-section {
+    background: var(--bg-code);
+    border-color: var(--border-code);
+}
+
+.library-section {
+    background: var(--bg-tools);
+    border-color: var(--border-tools);
+}
+
+.mindset-section {
+    background: var(--bg-mindset);
+    border-color: var(--border-mindset);
+}
+
+/* Card Header & Title Row */
+.card-title-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 1.2rem;
+}
+
+.card-title-row h2 {
+    font-family: var(--font-heading);
+    font-size: clamp(1.2rem, 2vw, 1.35rem);
+    font-weight: 800;
+    color: var(--card-text);
+}
+
+.badge-flare {
+    width: 40px;
+    height: 40px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+    color: #ffffff;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
+    flex-shrink: 0;
+    transition: var(--transition-smooth);
+}
+
+.glass-card:hover .badge-flare {
+    transform: scale(1.1) rotate(-5deg);
+}
+
+.flare-pastel-blue   { background: linear-gradient(135deg, #0284c7, #38bdf8); }
+.flare-pastel-purple { background: linear-gradient(135deg, #7c3aed, #a78bfa); }
+.flare-pastel-mint   { background: linear-gradient(135deg, #059669, #34d399); }
+
+/* About Narrative */
+.narrative-body {
+    font-size: 0.98rem;
+    line-height: 1.85;
+    color: var(--card-muted);
+    font-weight: 500;
+}
+
+.narrative-body strong {
+    color: var(--primary-blue);
+    font-weight: 700;
+}
+
+
+/* Education Card */
+.edu-card-content {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.edu-top-line {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.edu-top-line h3 {
+    font-size: 1.08rem;
+    font-weight: 800;
+    color: var(--card-text);
+}
+
+.gpa-pill {
+    font-size: 0.78rem;
+    font-weight: 700;
+    color: var(--primary-blue);
+    background: rgba(2, 132, 199, 0.15);
+    padding: 3px 10px;
+    border-radius: 7px;
+}
+
+
+.edu-period {
+    font-size: 0.85rem;
+    color: var(--card-muted);
+    margin-top: 2px;
+    font-weight: 600;
+}
+
+.edu-summary {
+    font-size: 0.92rem;
+    color: var(--card-muted);
+    line-height: 1.7;
+    margin-top: 6px;
+    font-weight: 500;
+}
+
+/* Responsive Bento Grid */
+@media (max-width: 992px) {
+    .bento-col-8,
+    .bento-col-4,
+    .bento-col-6 {
+        grid-column: span 12;
+    }
+}

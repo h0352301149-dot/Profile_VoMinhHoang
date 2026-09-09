@@ -1,0 +1,126 @@
+/* =========================================================
+   DESIGN TOKENS & SYSTEM VARIABLES (LIGHT & DARK MODES)
+========================================================= */
+
+:root {
+    /* Palette Tokens */
+    --primary-blue: #0284c7;
+    --primary-purple: #7c3aed;
+    --accent-mint: #059669;
+    --accent-peach: #d97706;
+    --accent-rose: #e11d48;
+
+    /* Theme Tokens - Light Mode */
+    --bg-universe: #DCE8F5;
+    --card-bg: rgba(255, 255, 255, 0.88);
+    --card-border: rgba(2, 132, 199, 0.3);
+    --card-text: #0f172a;
+    --card-muted: #334155;
+    --card-hover-border: #0284c7;
+
+    /* Section Specific Backgrounds & Borders (Light) */
+    --bg-hero: rgba(255, 255, 255, 0.88);
+    --border-hero: #2D5188;
+
+    --bg-about: #E1F2F7;
+    --border-about: #4788A5;
+
+    --bg-edu: rgba(255, 255, 255, 0.92);
+    --border-edu: #E7CBBE;
+
+    --bg-projects: #F9E5E3;
+    --border-projects: #EB99A7;
+    --bg-pod-1: #F6F4FF;
+    --bg-pod-2: #F8EBFC;
+    --bg-pod-3: #FBECF1;
+
+    --bg-code: #CDE5F7;
+    --border-code: #89AAD7;
+
+    --bg-tools: #FFFFFF;
+    --border-tools: #E7CBBE;
+
+    --bg-mindset: #D4E5C0;
+    --border-mindset: #718355;
+
+    --bg-contact-chip: #EAF5FE;
+    --border-contact-chip: rgba(2, 132, 199, 0.25);
+
+    --nav-bg: rgba(255, 255, 255, 0.92);
+    --nav-border: rgba(2, 132, 199, 0.3);
+    --nav-btn-bg: rgba(0, 0, 0, 0.04);
+    --nav-btn-color: #0f172a;
+
+    --footer-bg: #98ADC5;
+    --footer-border: #6B88A8;
+    --footer-line: #6B88A8;
+    --footer-text: #1E354F;
+
+    --border-color: rgba(2, 132, 199, 0.3);
+    --bg-input: rgba(255, 255, 255, 0.75);
+    --accent-gradient: linear-gradient(135deg, #0284c7 0%, #7c3aed 100%);
+
+    --shadow-main: 0 18px 45px -10px rgba(2, 105, 168, 0.28), 0 4px 14px rgba(0, 0, 0, 0.06);
+    --shadow-hover: 0 26px 55px -10px rgba(2, 132, 199, 0.38), 0 0 25px rgba(124, 58, 237, 0.2);
+
+    --transition-smooth: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+    --font-primary: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    --font-heading: 'Space Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+[data-theme="dark"] {
+    /* Theme Tokens - Dark Mode (Chỉ đổi màu không gian vũ trụ & hiệu ứng sao bên ngoài) */
+    --bg-universe: #0B1320;
+
+    /* Các ô nội dung bên trong KHÔNG ĐỔI MÀU (Giữ nguyên màu nền pastel & màu chữ gốc) */
+    --card-bg: rgba(255, 255, 255, 0.88);
+    --card-border: rgba(2, 132, 199, 0.3);
+    --card-text: #0f172a;
+    --card-muted: #334155;
+    --card-hover-border: #0284c7;
+
+    /* Section Specific Backgrounds & Borders (Giữ nguyên 100% màu pastel) */
+    --bg-hero: rgba(255, 255, 255, 0.88);
+    --border-hero: #2D5188;
+
+    --bg-about: #E1F2F7;
+    --border-about: #4788A5;
+
+    --bg-edu: rgba(255, 255, 255, 0.92);
+    --border-edu: #E7CBBE;
+
+    --bg-projects: #F9E5E3;
+    --border-projects: #EB99A7;
+    --bg-pod-1: #F6F4FF;
+    --bg-pod-2: #F8EBFC;
+    --bg-pod-3: #FBECF1;
+
+    --bg-code: #CDE5F7;
+    --border-code: #89AAD7;
+
+    --bg-tools: #FFFFFF;
+    --border-tools: #E7CBBE;
+
+    --bg-mindset: #D4E5C0;
+    --border-mindset: #718355;
+
+    --bg-contact-chip: #EAF5FE;
+    --border-contact-chip: rgba(2, 132, 199, 0.25);
+
+    --border-color: rgba(2, 132, 199, 0.3);
+    --bg-input: rgba(255, 255, 255, 0.85);
+
+    /* Navbar & Footer thích ứng với nền tối bên ngoài */
+    --nav-bg: rgba(18, 29, 46, 0.92);
+    --nav-border: rgba(56, 189, 248, 0.3);
+    --nav-btn-bg: rgba(255, 255, 255, 0.08);
+    --nav-btn-color: #F8FAFC;
+
+    --footer-bg: #0E1826;
+    --footer-border: #1E3048;
+    --footer-line: #263D5C;
+    --footer-text: #CBD5E1;
+
+    --shadow-main: 0 20px 50px -10px rgba(0, 0, 0, 0.75), 0 0 25px rgba(56, 189, 248, 0.12);
+    --shadow-hover: 0 28px 60px -10px rgba(0, 0, 0, 0.9), 0 0 30px rgba(56, 189, 248, 0.25);
+}

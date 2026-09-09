@@ -1,0 +1,257 @@
+/* =========================================================
+   HERO PROFILE COMPONENT & CONTACT RIBBON
+========================================================= */
+
+.hero-center-card {
+    background: var(--bg-hero);
+    border-color: var(--border-hero);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.4rem;
+    animation: pageIntro 0.85s cubic-bezier(0.16, 1, 0.3, 1) 0.1s forwards;
+}
+
+.hero-avatar-area {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.avatar-orbit {
+    width: 120px;
+    height: 120px;
+    min-width: 120px;
+    max-width: 120px;
+    min-height: 120px;
+    max-height: 120px;
+    border-radius: 50%;
+    overflow: hidden;
+    padding: 3.5px;
+    background: linear-gradient(135deg, var(--primary-blue), var(--primary-purple));
+    box-shadow: 0 12px 30px rgba(124, 58, 237, 0.3);
+    margin: 0 auto 1.1rem;
+    transition: transform 0.4s var(--transition-smooth);
+    flex-shrink: 0;
+}
+
+.avatar-orbit:hover {
+    transform: scale(1.06) rotate(3deg);
+}
+
+.avatar-img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+}
+
+.hero-name {
+    font-family: var(--font-heading);
+    font-size: clamp(1.45rem, 2.5vw, 1.95rem);
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    background: linear-gradient(135deg, var(--card-text) 30%, var(--primary-blue));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hero-role {
+    font-size: 0.98rem;
+    color: var(--primary-blue);
+    font-weight: 700;
+    margin: 4px 0 10px;
+}
+
+.status-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(5, 150, 105, 0.15);
+    color: #059669;
+    border: 1px solid rgba(5, 150, 105, 0.3);
+    padding: 5px 16px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 700;
+}
+
+
+
+.beacon-dot {
+    width: 8px;
+    height: 8px;
+    background: #059669;
+    border-radius: 50%;
+    box-shadow: 0 0 10px #059669;
+    animation: beaconPulse 1.8s infinite;
+}
+
+
+
+@keyframes beaconPulse {
+    0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(5, 150, 105, 0.7); }
+    70% { transform: scale(1); box-shadow: 0 0 0 8px rgba(5, 150, 105, 0); }
+    100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(5, 150, 105, 0); }
+}
+
+/* =========================================================
+   CONTACT RIBBON & CHIPS
+========================================================= */
+
+.contact-ribbon {
+    display: grid;
+    grid-template-columns: 0.8fr 1.7fr 1.1fr 0.9fr;
+    gap: 0.65rem;
+    width: 100%;
+    margin-top: 0.4rem;
+}
+
+.contact-chip {
+    background: var(--bg-contact-chip);
+    border: 2px solid var(--border-contact-chip);
+    padding: 8px 12px;
+    color: var(--card-text);
+    text-align: left;
+    border-radius: 14px;
+    overflow: hidden;
+    min-width: 0;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    min-height: 58px;
+    cursor: default;
+    transition: var(--transition-smooth);
+    user-select: none;
+}
+
+#hero-email-chip {
+    padding: 8px 8px;
+    gap: 6px;
+}
+
+#hero-email-chip .chip-icon {
+    width: 28px;
+    height: 28px;
+    font-size: 0.82rem;
+    flex-shrink: 0;
+}
+
+#hero-email-chip .chip-text {
+    flex: 1;
+    min-width: 0;
+    overflow: visible;
+}
+
+#hero-email-chip .copy-hint-icon {
+    font-size: 0.75rem;
+    margin-left: 2px;
+}
+
+.contact-chip.copy-trigger {
+    cursor: pointer;
+}
+
+.contact-chip.copy-trigger:hover,
+.contact-chip.copy-trigger:focus-visible {
+    transform: translateY(-3px) scale(1.015);
+    border-color: var(--primary-blue);
+    box-shadow: 0 8px 20px rgba(2, 132, 199, 0.2);
+}
+
+.contact-chip.copy-trigger:focus-visible {
+    outline: 2px solid var(--primary-blue);
+    outline-offset: 2px;
+}
+
+.chip-icon {
+    width: 34px;
+    height: 34px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.92rem;
+    flex-shrink: 0;
+    background: rgba(2, 132, 199, 0.15);
+    color: var(--primary-blue);
+    transition: var(--transition-smooth);
+}
+
+.contact-chip:hover .chip-icon {
+    transform: scale(1.08);
+    background: linear-gradient(135deg, var(--primary-blue), var(--primary-purple));
+    color: #ffffff;
+}
+
+.chip-text {
+    flex: 1;
+    min-width: 0;
+    overflow: hidden;
+}
+
+.chip-text small {
+    color: var(--card-muted);
+    font-size: 0.68rem;
+    font-weight: 700;
+    margin-bottom: 2px;
+    display: block;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+}
+
+.chip-text strong {
+    font-size: clamp(0.75rem, 0.82vw, 0.85rem);
+    color: var(--card-text);
+    font-weight: 700;
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+#hero-email {
+    font-size: clamp(0.7rem, 0.76vw, 0.82rem);
+    letter-spacing: -0.2px;
+    white-space: nowrap;
+    overflow: visible;
+    text-overflow: clip;
+}
+
+.copy-hint-icon {
+    margin-left: auto;
+    font-size: 0.8rem;
+    color: var(--card-muted);
+    opacity: 0.55;
+    transition: var(--transition-smooth);
+    flex-shrink: 0;
+}
+
+.contact-chip:hover .copy-hint-icon {
+    opacity: 1;
+    color: var(--primary-purple);
+    transform: scale(1.15);
+}
+
+/* Responsive Ribbon */
+@media (max-width: 1100px) {
+    .contact-ribbon {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 640px) {
+    .contact-ribbon {
+        grid-template-columns: 1fr;
+    }
+    .avatar-orbit {
+        width: 105px;
+        height: 105px;
+        min-width: 105px;
+        max-width: 105px;
+        min-height: 105px;
+        max-height: 105px;
+    }
+}

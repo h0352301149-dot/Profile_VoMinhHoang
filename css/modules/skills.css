@@ -1,0 +1,62 @@
+/* =========================================================
+   SKILLS SECTION & INTERACTIVE CHIPS
+========================================================= */
+
+.tile-chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 0.4rem;
+}
+
+.interactive-chip {
+    font-size: 0.85rem;
+    font-weight: 700;
+    padding: 6px 14px;
+    border-radius: 10px;
+    transition: var(--transition-smooth);
+    cursor: default;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    border: 1px solid transparent;
+}
+
+.interactive-chip:hover {
+    transform: translateY(-3px) scale(1.08);
+    box-shadow: 0 6px 16px rgba(124, 58, 237, 0.25);
+    background: linear-gradient(135deg, var(--primary-blue), var(--primary-purple));
+    color: #ffffff;
+    border-color: transparent;
+}
+
+.chip-pastel-blue {
+    background: rgba(2, 132, 199, 0.14);
+    color: #0284c7;
+    border-color: rgba(2, 132, 199, 0.25);
+}
+
+.chip-pastel-purple {
+    background: rgba(124, 58, 237, 0.14);
+    color: #7c3aed;
+    border-color: rgba(124, 58, 237, 0.25);
+}
+
+.chip-pastel-peach {
+    background: rgba(217, 119, 6, 0.14);
+    color: #d97706;
+    border-color: rgba(217, 119, 6, 0.25);
+}
+
+.chip-pastel-mint {
+    background: rgba(5, 150, 105, 0.14);
+    color: #059669;
+    border-color: rgba(5, 150, 105, 0.25);
+}
+
+.chip-slate {
+    background: rgba(0, 0, 0, 0.06);
+    color: var(--card-text);
+    border-color: rgba(0, 0, 0, 0.08);
+}
+

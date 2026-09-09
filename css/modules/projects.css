@@ -1,0 +1,114 @@
+/* =========================================================
+   PROJECTS SECTION & PROJECT POD CARDS
+========================================================= */
+
+.project-matrix {
+    display: flex;
+    flex-direction: column;
+    gap: 1.3rem;
+}
+
+.project-pod {
+    background: var(--bg-pod-1);
+    border: 2px solid var(--border-projects);
+    border-radius: 18px;
+    padding: clamp(1.2rem, 2.2vw, 1.7rem);
+    position: relative;
+    overflow: hidden;
+    transition: var(--transition-smooth);
+}
+
+.project-pod.pod-pastel-blue  { background: var(--bg-pod-1); }
+.project-pod.pod-pastel-peach { background: var(--bg-pod-2); }
+.project-pod.pod-pastel-mint  { background: var(--bg-pod-3); }
+
+.project-pod::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 5px;
+    border-radius: 0 0 18px 18px;
+    background: var(--border-projects);
+    transform: scaleY(0);
+    transform-origin: bottom;
+    transition: transform 0.25s ease;
+}
+
+.project-pod:hover {
+    transform: translateY(-5px) scale(1.008);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
+}
+
+[data-theme="dark"] .project-pod:hover {
+    box-shadow: 0 14px 32px rgba(0, 0, 0, 0.45);
+}
+
+.project-pod:hover::after {
+    transform: scaleY(1);
+}
+
+.project-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 0.8rem;
+    flex-wrap: wrap;
+    margin-bottom: 0.8rem;
+}
+
+.project-header h3 {
+    font-size: clamp(1.05rem, 1.8vw, 1.2rem);
+    font-weight: 800;
+    color: var(--card-text);
+}
+
+.badge-tag-wrap {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.badge-tag {
+    font-size: 0.72rem;
+    padding: 3px 10px;
+    border-radius: 6px;
+    background: rgba(2, 132, 199, 0.12);
+    color: var(--primary-blue);
+    font-weight: 700;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+}
+
+
+.year-flag {
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 3px 10px;
+    border-radius: 7px;
+}
+
+.flag-pastel-blue  { background: rgba(2, 132, 199, 0.15); color: #0284c7; }
+.flag-pastel-peach { background: rgba(217, 119, 6, 0.15); color: #d97706; }
+.flag-pastel-mint  { background: rgba(5, 150, 105, 0.15); color: #059669; }
+
+
+.bullet-list {
+    padding-left: 1.2rem;
+    font-size: 0.94rem;
+    color: var(--card-muted);
+    line-height: 1.8;
+    font-weight: 500;
+}
+
+.bullet-list li {
+    margin-bottom: 6px;
+}
+
+.bullet-list strong {
+    color: var(--card-text);
+    font-weight: 700;
+}
