@@ -9,3 +9,11 @@ node_modules/
 # OS metadata
 .DS_Store
 Thumbs.db
+
+# Secrets & Private Keys (Admin SDK)
+*serviceAccount*.json
+*private_key*.json
+*credential*.json
+*.env*
+.env.local
+
